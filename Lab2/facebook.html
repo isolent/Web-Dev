@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title> Facebook - log in or sign up</title>
+        <style> 
+            .logoandlogin {
+                height: 66%;
+                background-color: rgba(240,242,245,255);
+                padding-top: 10%;
+                margin-bottom: 13%;
+            }
+
+            .logoandinfo{
+                position : fixed;
+                margin-left: 190px;
+            }
+            .info {
+                font-family: Arial, sans-serif;
+                font-size: 28px;
+                font-weight: normal;
+                line-height: 32px;
+                width: 500px;
+            }
+            
+            .inputtext {
+                color: white;
+                width: 330px;
+                height: 40px;
+                padding: 14px 16px;
+                border-radius: 6px;
+                border:rgb(114, 52, 52);
+                font-size: 20px;
+                padding : 10px;
+            } 
+           
+            .email, .password {
+                padding-top: 6px;
+                padding-bottom: 6px;
+                width: 330px;
+                height: 40px;
+                padding : 2px;
+                border-radius: 6px;
+                border: 1px solid rgb(195, 195, 195);
+                background:rgb(253, 253, 253);
+                font-size: 25px;
+                margin-left: 28px;
+                margin-bottom: 15px;
+                margin-top: 10px
+            }
+
+            .login_button {
+                color: white;
+                width: 335px;
+                height: 50px;
+                padding: 10px 14px;
+                border-radius: 6px;
+                border:rgb(114, 52, 52);
+                background:rgb(33, 120, 240);
+                font-size: 18px;
+                text-decoration: none;
+                margin-left: 13px;
+            }
+
+           #sec {
+                width : 390px;
+                height: 345px;
+                background-color: white; 
+                border-radius: 8px;      
+                padding-top: 5px  ;    
+                margin-left: 820px ;  
+                margin-top: 10px ;  
+                padding : 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+           }
+            
+            .newaccount{
+                width: 185px;
+                height: 50px;
+                font-family: Arial, Helvetica;
+                font-size: 16px;
+                border-radius: 8px;
+                background-color: rgba(66,183,42,255); 
+                border:rgb(114, 52, 52);
+                text-decoration: none;
+                font-weight: bold;
+                margin-left: 100px;
+                text-align: center;
+                padding: 3px 13px;
+            }
+            .newpassword {
+                padding-top : 20px;
+                margin-bottom: 1%;
+                border: white;
+                color: #1877f2;
+                font-size: 14px;
+                font-weight:500;
+                text-align: center;
+                font-family: Helvetica;
+                font-weight: bolder;
+            }
+
+            .suggestion {
+                font-family: sans-serif;
+                font-size: 14px;
+                margin-top: 55px;
+                margin-left: 24px;
+            }
+
+            #space {
+                align-items: center;
+                border-bottom: 1px solid #dadde1;
+                display: flex;
+                margin-bottom: 30px;
+                margin-top: 1%;
+                text-align: center;
+            }
+
+            #space_2 {
+                border-bottom: 1px solid #dddfe2;
+                height: 1px;
+                padding-top: 0.5%;
+            }
+            
+            .undermain {
+                width: 720px;
+                font-size: 11.5px;
+                padding: 2px;
+                margin-top: 210px ;
+                margin-left: 350px;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 17px;
+                color : rgb(138,141,145);
+            }
+
+            .moreset {
+                padding-top: 50px ;
+            }
+
+            #words {
+                word-spacing: 5.3px;
+            }
+            
+            .buttons{
+                margin-left: 16px;
+            }
+            
+            #login_link:visited{
+                color : white;
+            }
+
+            a.suggestion:visited{
+                color: black;
+            }
+            
+            a.newpassword:visited, #new_acc:visited{
+                color:white;
+            }
+            #new_pass:visited {
+                color: #1877f2;
+            }
+        
+        </style>
+    </head>
+
+    <body>
+
+        <div class = "main">
+            <div class = "logoandlogin">
+                <div class = "logoandinfo">    
+                    <div class = "img">
+                        <img src="static/img/Facebook.png" alt="logo" width = "240" class="facebook">
+                    </div>
+                    <p class = "info"> Facebook helps you connect and share <br> with the people in your life.</p> 
+                </div>
+
+                <div id = "sec">
+                    <div class = "loginfo">
+                        <div id = "inp">  
+                            <div class = "email">
+                                <input type="text" class = "inputtext" placeholder="Email address or phone number" >
+                            </div>
+                            <div class = "password"> 
+                                <input type="password"  class ="inputtext" placeholder="Password">
+                            </div>
+                        </div>   
+
+                        <div class = "buttons">
+                            <button class = login_button> 
+                                <a href = https://www.facebook.com id = "login_link"> <strong> Log in </strong> </a> 
+                            </button>
+                        </div>   
+
+                        <div class = "newpassword">
+                            <a href = "https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0" id = "new_pass" > Forgotten password?</button> 
+                        </div>
+
+                        <div id = "space"> <p></p>
+                        </div>
+
+                        <div>
+                            <button class = "newaccount">
+                                <a href ="https://www.facebook.com" id = new_acc> Create new account </a>
+                            </button>
+                        </div>
+                    </div>    
+                    <div class = "suggestion">        
+                        <p> <a href = "https://www.facebook.com" class = "suggestion"> <strong> Create a Page </strong> </a>for a celebrity, brand or business. </p>
+                    </div> 
+                </div>
+            <div class = "undermain"> 
+                <div class = "lang">
+                    <p id="words"> English(UK)    Русский    Türkçe Bahasa Indonesia 中文(简体) Қазақша    Deutsch 한국어 Shqip Español Português (Brasil) 
+                    <img src = "static/img/plus.png" width = "24" class = "image"> 
+                    </p>
+                </div>
+
+
+                <div id = "space_2"> <p></p>
+        
+                    <div class = "more_set"> 
+                        <p id="words"> Sign Up  Log in   Messenger   Facebook Lite   Watch   Places  Games   Marketplace   Meta Pay  Oculus   Portal   Instagram   Bulletin   Fundraisers 
+                            Services   Voting Information Centre   Privacy Policy   Privacy Centre   Groups   About   
+                            Create ad   Create Page   Developers   Careers   Cookies   AdChoices   Terms      Help      
+                            Contact uploading and non-users    Settings <br>
+                            <br> Meta © 2023</p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </body> 
+</html>

@@ -1,6 +1,6 @@
 // import { Observable } from 'rxjs';
 
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { products } from '../products';
 
@@ -11,7 +11,11 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = [...products];
-
+  @Input() cate: number;
+  
+  constructor(){
+    this.cate = 0;
+  }
   share(url: string) {
     window.open('https://t.me/share/url?url=' + url, '_blank');
   }

@@ -1,16 +1,11 @@
 <!-- <p>product-category works!</p> -->
 
-<h1>Categories</h1>
+<h1>Categories:</h1>
 
 <!-- <h2 class="name"> <a routerLink="/first"> Telephones & gadgets </a> </h2>
 <h2 class="name"> <a routerLink="/second"> Computers </a> </h2>
 <h2 class="name"> <a routerLink="/third"> Beauty & health </a></h2>
 <h2 class="name"> <a routerLink="/forth"> Appliances </a></h2> -->
 <div *ngFor="let cate of category">
-    <h3>
-        <a [title] = "cate.name" 
-        [routerLink] = "['/Categories', cate.id]"> {{ cate.name }} </a>
-    </h3>
-    <img src="{{cate.image}}" alt="" width="200"/>
-    
+    <a [routerLink]="['/categories', cate.id]" >{{cate.name}}</a>
 </div>

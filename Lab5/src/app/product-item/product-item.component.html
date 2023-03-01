@@ -1,2 +1,18 @@
-<!-- <p>product-item works!</p> -->
+<div *ngIf = "cur_category == product.id"> 
+    <h3>
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+    >
+      {{ product.name }}
+    </a>
+  </h3>
+  <img src="{{ product.photo }}" alt="" width="150" />
 
+  <p *ngIf="product.description">
+    Description: {{ product.description }}<br />
+  </p>
+
+  <button type="button" (click)="share(product.url)">Share</button>
+
+</div>

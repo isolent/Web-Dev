@@ -1,1 +1,6 @@
-<p>album-detail works!</p>
+<div *ngIf = "album">
+    <h2>Album detail #{{album.id}}</h2>
+    <h4>{{album.title}}</h4>
+    <p>{{album.url}}</p>
+</div>
+

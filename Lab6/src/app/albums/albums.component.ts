@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Album} from "../models";
 import {ALBUMS} from "../fake-db";
 
@@ -15,5 +15,9 @@ export class AlbumsComponent {
 
   ngOnInit(): void {
     this.albums = ALBUMS;
+  }
+
+  removeAlbum(idx: number) {
+    this.albums = this.albums.filter((x) => x.id !== idx);
   }
 }

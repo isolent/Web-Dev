@@ -1,6 +1,6 @@
 // import { Observable } from 'rxjs';
 
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { products } from '../products';
@@ -11,6 +11,8 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
+  ngOnInit(): void {
+  }
   products = [...products];
   currentUrl: string | undefined;
   
@@ -28,6 +30,10 @@ export class ProductListComponent {
       this.currentUrl = url.join('/');
       this.cur_category = this.currentUrl.split('/').pop();
     })
+  }
+
+  onNewTaskRemove(index: number){
+    this.products = this.products.filter((x) => x.num !== index);
   }
 }
 

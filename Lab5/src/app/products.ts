@@ -8,7 +8,7 @@ export class Product {
   description: string | undefined;
   url: string = '';
   photo: string | undefined;
-  like: number | undefined;
+  like: number = 0;
 }
 
 export const products = [
@@ -21,7 +21,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/apple-iphone-14-pro-max-256gb-fioletovyi-106363342/?c=750000000',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h00/h18/62948780834846/apple-iphone-14-pro-max-128gb-fioletovyj-106363342-1.jpg',
-    category: Categories[1],
     like: 0
   },
   {
@@ -34,7 +33,6 @@ export const products = [
 
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h12/hcd/52679174324254/apple-macbook-air-13-mly33-chernyi-105933768-1.jpg',
-    category: Categories[2],
     like: 0
   },
   {
@@ -46,7 +44,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/samsung-galaxy-s23-5g-8-gb-512-gb-zelenyi-podarok-108714365/?c=750000000',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h0a/h3e/68538727563294/samsung-galaxy-s23-5g-8-gb-512-gb-zelenyi-108714365-1.jpg',
-    category: Categories[1],
     like: 0
   },
   {
@@ -59,7 +56,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/apple-watch-series-8-41-mm-aluminum-zolotistyi-106585035/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h60/hfa/63158666461214/apple-watch-series-8-41-mm-aluminum-zolotistyj-106585035-1.jpg',
-    category: Categories[1],
     like: 0
   },
   {
@@ -72,7 +68,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/luxvisage-lip-volumizer-hot-vanilla-blesk-dlja-gub-korichnevyi-304-caramel-102827970/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hed/h4f/47076161454110/luxvisage-blesk-dla-uvelicenia-ob-ema-gub-304-caramel-102827970-1.jpg',
-    category: Categories[3],
     like: 0
   },
   {
@@ -85,7 +80,6 @@ export const products = [
 
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hcd/he9/46637897416734/apple-watch-se-44mm-space-gray-aluminium-case-with-sport-band-mydt2gk-a-cernyj-100568195-1-Container.jpg',
-    category: Categories[1],
     like: 0
   },
   {
@@ -97,7 +91,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/kenwood-kcl95-004si-cooking-chef-xl-serebristyi-100883789/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h00/hc8/33543472480286/kenwood-kcl95-004si-cooking-chef-xl-serebristyj-100883789-1-Container.jpg',
-    category: Categories[4],
     like: 0
   },
   {
@@ -112,7 +105,6 @@ export const products = [
 
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hd6/h5b/33271772446750/apple-macbook-air-2020-13-3-mgn93-serebristyj-100798912-1-Container.jpg',
-    category: Categories[2],
     like: 0
   },
   {
@@ -135,7 +127,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/smart-baby-watch-z6-gps-zelenyi-101910569/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h98/hbd/49221585666078/bosch-msm-2650b-black-3100958-1-Container.jpg',
-    category: Categories[4],
     like: 0
   },
   {
@@ -148,7 +139,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/samsung-dv90t8240sx-lp-chernyi-101247218/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h0f/hca/33713306042398/samsung-dv90t8240sx-lp-cernyj-101247218-1.jpg',
-    category: Categories[4],
     like: 0
   },
   {
@@ -160,7 +150,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/dyson-v8-motorhead-serebristyi-100403973/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hcb/h62/32379949121566/dyson-v8-motorhead-serebristyj-100403973-1.jpg',
-    category: Categories[4],
     like: 0
   },
   {
@@ -172,7 +161,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/bosch-sms44di01t-serebristyi-103948041/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hba/ha1/49097882075166/bosch-sms44di01t-serebristyj-103948041-1.jpg',
-    category: Categories[4],
     like: 0
   },
   {
@@ -184,7 +172,6 @@ export const products = [
     url: 'hhttps://kaspi.kz/shop/p/acer-nitro-5-an515-57-nh-qeker-004-chernyi-108194028/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h2e/hc4/67236399185950/acer-nitro-5-an515-57-nh-qeker-004-chernyi-108194028-1.jpg',
-    category: Categories[2],
     like: 0
   },
   {
@@ -196,7 +183,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/asus-vivobook-m1603qa-mb219-90nb0y81-m00cw0-sinii-108310032/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h3c/h7b/67525401575454/asus-vivobook-m1603qa-mb219-90nb0y81-m00cw0-sinii-108310032-1.jpg',
-    category: Categories[2],
     like: 0
   },
   {
@@ -208,7 +194,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/asus-x515ea-bq1189w-90nb0ty1-m25390-seryi-105321625/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/ha7/hca/51563452956702/asus-asus-x515ea-i3-1115g4-8gb-256ssd-15-6-win11-x515ea-bq1189w-x515ea-bq1189w-seryj-105321625-1.jpg',
-    category: Categories[2],
     like: 0
   },
   {
@@ -221,7 +206,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/luxvisage-dragon-glass-3d-volume-blesk-dlja-gub-prozrachnyi-prozrachnyi-103377724/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h93/h40/48133471731742/prozracnyj-blesk-dla-gub-dragon-glass-3d-volume-103377724-3.jpg',
-    category: Categories[3],
     like: 0
   },
   {
@@ -234,7 +218,6 @@ export const products = [
     url: 'https://kaspi.kz/shop/p/the-ordinary-niacinamide-10-zinc-1-syvorotka-30-ml-100703687/?c=750000000#!/item',
     photo:
       'https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hd5/h46/33287291764766/the-ordinary-niacinamide-10-zinc-1-syvorotka-30-ml-100703687-3.jpg',
-    category: Categories[3],
     like: 0
   },
   {

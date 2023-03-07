@@ -8,11 +8,20 @@
     </a>
   </h3>
   <img src="{{ product.photo }}" alt="" width="150" />
-
   <p *ngIf="product.description">
     Description: {{ product.description }}<br />
   </p>
+  <div class="buttons">
+  <div class="but-cont">
+    <button class="like" (click)="liked()" type="button">
+      <img src="https://cdn-icons-png.flaticon.com/512/3179/3179453.png" width="40" height="25" alt="">
+      {{product.like}}
+    </button>
+    <button type="button" (click)="share(product.url)">Share</button>
+  </div>
 
-  <button type="button" (click)="share(product.url)">Share</button>
-
+  <button (click)="removeItem()">
+    remove item
+  </button>
+ 
 </div>

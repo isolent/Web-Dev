@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Categories } from '../categories';
 
 @Component({
@@ -6,9 +6,15 @@ import { Categories } from '../categories';
   templateUrl: './product-category.component.html',
   styleUrls: ['./product-category.component.css']
 })
-export class ProductCategoryComponent {
+export class ProductCategoryComponent implements OnInit{
   category = [...Categories];
   constructor() { }
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+  visible = false;
+
+  toggleCategoryList() {
+    this.visible = !this.visible;
   }
 }

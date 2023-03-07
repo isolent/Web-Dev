@@ -19,8 +19,13 @@ export class ProductItemComponent implements OnInit{
   constructor() {
     this.product = new Product;
   }
+
+  liked(){
+    this.product.like +=1;
+  }
+  
   removeItem() {
-    this.remove.emit(this.product.id);
+    this.remove.emit(this.product.num);
   }
   share(url: string) {
     window.open('https://t.me/share/url?url=' + url, '_blank');

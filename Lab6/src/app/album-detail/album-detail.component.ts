@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AlbumService } from '../album.service';
 import { ALBUMS } from '../fake-db';
 import {Album} from "../models"
 @Component({
@@ -7,19 +8,26 @@ import {Album} from "../models"
   templateUrl: './album-detail.component.html',
   styleUrls: ['./album-detail.component.css']
 })
-export class AlbumDetailComponent {
+export class AlbumDetailComponent implements OnInit{
   album: Album;
+  loaded: boolean;
 
-  constructor(private route: ActivatedRoute){
+  constructor (private route: ActivatedRoute,
+              private albumsService: AlbumService) {
     this.album = {} as Album;
+    this.loaded = true;
   }
 
-  ngOnInit(): void{
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    // if (id) {
-    //   let num_id = +id;
-    // }
-    console.log(typeof(id));
-    this.album = ALBUMS.find((album: Album) => album.id === id) as Album;
+  ngOnInit(): void {
+      this.route.paramMap.subscribe((params) => {
+        const id = Number(params.get('id'));
+        
+        this.loaded = false;
+
+        this.albumsService.getAlbum(id).subscribe((album) => {
+          this.album = album;
+          this.loaded = true;
+        });
+      })
   }
 }

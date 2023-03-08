@@ -1,6 +1,16 @@
 <div *ngIf = "album">
     <h2>Album detail #{{album.id}}</h2>
-    <h4>{{album.title}}</h4>
-    <p>{{album.url}}</p>
+    <ul>
+        <li>
+          AlbumId: {{album.albumId}}
+        </li>
+        <li>
+          Id: {{album.id}}
+        </li>
+        <li>
+          Title: {{album.title}} 
+        </li>
+      </ul>
 </div>
 
+<h1 *ngIf="!loaded"> Post item is loading</h1>

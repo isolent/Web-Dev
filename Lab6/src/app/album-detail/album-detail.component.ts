@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AlbumService } from '../album.service';
 import { ALBUMS } from '../fake-db';
 import {Album} from "../models"
+import {Location} from '@angular/common';
+
 @Component({
   selector: 'app-album-detail',
   templateUrl: './album-detail.component.html',
@@ -13,7 +15,8 @@ export class AlbumDetailComponent implements OnInit{
   loaded: boolean;
 
   constructor (private route: ActivatedRoute,
-              private albumsService: AlbumService) {
+              private albumsService: AlbumService,
+              private location: Location) {
     this.album = {} as Album;
     this.loaded = true;
   }
@@ -29,5 +32,18 @@ export class AlbumDetailComponent implements OnInit{
           this.loaded = true;
         });
       })
+  }
+
+  updatePost() {
+    this.loaded = false;
+    this.albumsService.updatePost(this.album).subscribe((albumz) => {
+      console.log(albumz);
+      this.loaded = true;
+    });
+  }
+
+
+  goBack() {
+    this.location.back();
   }
 }

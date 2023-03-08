@@ -1,16 +1,12 @@
-<div *ngIf = "album">
+<div *ngIf = "loaded">
     <h2>Album detail #{{album.id}}</h2>
-    <ul>
-        <li>
-          AlbumId: {{album.albumId}}
-        </li>
-        <li>
-          Id: {{album.id}}
-        </li>
-        <li>
-          Title: {{album.title}} 
-        </li>
-      </ul>
+    <input type="text" [(ngModel)]="album.title">
+
+  <p>{{album.title}}</p>
+  <button (click)="updatePost()">Save</button>
+  <button (click)="goBack()">Go Back</button>
+  <button routerLink="/albums/{{album.id}}/photos">Photos</button>
+
 </div>
 
-<h1 *ngIf="!loaded"> Post item is loading</h1>
+<h1 *ngIf="!loaded"> Album details are loading....</h1>

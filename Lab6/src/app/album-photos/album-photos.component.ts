@@ -12,41 +12,29 @@ import { Location } from '@angular/common';
 })
 export class AlbumPhotosComponent {
   // "!" non-null assertion operator - переменная никогда не будет 
-  // null/undefined во врем выполнения
+  // null/undefined во время выполнения
   
-  albums!: Album;
-  photos!: AlbumPhotos[];
-  loaded: boolean = true;
+  albumPhotos: AlbumPhotos[] = [];
+  id : number = 0;
 
   constructor(private route: ActivatedRoute,
               private location: Location,
-              private albumService: AlbumService) {
+              private albumsService: AlbumService) {
   }
 
   ngOnInit(): void {
-    this.getAlbum();
-    this.getPhotos();
+
+    this.route.paramMap.subscribe((params) =>{
+      this.id = Number(params.get("id"));
+      this.getAlbumPhotos(this.id);
+    })
+    
   }
 
-  getAlbum() {
-    this.route.paramMap.subscribe((params) => {
-      const id = Number(params.get('id'));
-      this.loaded = false;
-      this.albumService.getAlbum(id).subscribe((albumas) => {
-        this.albums = albumas;
-      });
-    });
-  }
-
-  getPhotos() {
-    this.route.paramMap.subscribe((params) => {
-      const id = Number(params.get('id'));
-      this.loaded = false;
-      this.albumService.getAlbumPhotos(id).subscribe((photos) => {
-        this.photos = photos;
-        this.loaded = true;
-      });
-    });
+  getAlbumPhotos(id: number) {
+    this.albumsService.getAlbumPhotos(id).subscribe((photos) =>{
+      this.albumPhotos = photos;
+    })
   }
 
   goBack() {

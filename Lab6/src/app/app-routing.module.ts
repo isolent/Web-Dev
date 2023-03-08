@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { HomeComponent } from './home/home.component';
 
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'albums', component: AlbumsComponent},
   {path: 'albums/:id', component: AlbumDetailComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'}, 
+  {path: 'albums/:id/photos', component: AlbumPhotosComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 @NgModule({

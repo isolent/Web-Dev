@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlbumService } from '../album.service';
 import { ALBUMS } from '../fake-db';
-import {Album} from "../models"
+import {Album, AlbumPhotos} from "../models"
 import {Location} from '@angular/common';
 
 @Component({
@@ -13,7 +13,6 @@ import {Location} from '@angular/common';
 export class AlbumDetailComponent implements OnInit{
   album: Album;
   loaded: boolean;
-
   constructor (private route: ActivatedRoute,
               private albumsService: AlbumService,
               private location: Location) {
@@ -42,7 +41,7 @@ export class AlbumDetailComponent implements OnInit{
     });
   }
 
-
+  
   goBack() {
     this.location.back();
   }
